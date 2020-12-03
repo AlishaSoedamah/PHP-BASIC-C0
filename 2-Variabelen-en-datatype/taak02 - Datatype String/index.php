@@ -4,7 +4,6 @@
 
 <?php 
 $naam = "Alisha";
-
 echo $naam;
 ?>
 
