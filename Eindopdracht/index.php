@@ -7,7 +7,9 @@
  * Opdracht 1: voeg hier het bestand allcoins.php in. 
  * Verder hoef je geen code te schrijven op deze pagina.
  */
-
+/* 
+ * OPD 1 require 'bitcoinData.php'; erbij.
+ */
 require 'bitcoinData.php';
 
 
