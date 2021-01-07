@@ -8,7 +8,7 @@
  * Verder hoef je geen code te schrijven op deze pagina.
  */
 /* 
- * OPD 1 require 'bitcoinData.php'; erbij.
+ * OPD 1 require 'bitcoinData.php'; zit hier
  */
 require 'bitcoinData.php';
 

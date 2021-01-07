@@ -19,10 +19,8 @@
  * Opdracht 2: Zet hier de $buttons array neer 
  */
 
- /* 
- * Opdracht 2 hier zit de array met 10,20 en 50.95
- */
-$buttons = [10, 20, 50.95];
+ /* OPD 2 $buttons array met 10, 300 en 50.95 euro*/
+$buttons = [10, 300, 50.95];
 
 /******************************************* OPDRACHT 2 doe je hierboven *******************************************/
 /*******************************************************************************************************************/
@@ -37,7 +35,6 @@ $buttons = [10, 20, 50.95];
  * De functie geeft de uitkomst van die berekening terug.
  * De gebruiker kan voor een vast bedrag bitcoins kopen. 
  */
-
 function calculateBitcoinAmount()
 {
     if (isset($_GET['euro'])) {
@@ -46,6 +43,8 @@ function calculateBitcoinAmount()
 
     //SCHRIJF JE CODE.
 
+$bitcoinMoney = getBitcoinPrice(); 
+return  $euro / $bitcoinMoney; // Prijs van euros converteren naar bitcoin prijs.
 
 
 }
@@ -74,7 +73,9 @@ $transactions = [
     [9431.84, 250, 0.0265],
     [5211.67, 200, 0.0384]
 ];
-
+/*
+* OPD 4
+*/
 if (isset($_GET['euro'])) {
 
     $euro = $_GET['euro']; //deze regel laten staan
@@ -83,7 +84,8 @@ if (isset($_GET['euro'])) {
      * Schrijf hieronder de code om de gekochte bitcoin aan de array $transactions toe te voegen.
      * Je voegt een bitcoinprijs toe, de prijs in euro's en het aantal gekochte bitcoins.
      */
-}
+    array_push($transactions,[getBitcoinPrice(), $euro, calculateBitcoinAmount()]);
+} // euro en gekochte bitcoin aan $transactions array 
 
 
 
